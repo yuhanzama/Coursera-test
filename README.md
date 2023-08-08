@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Page Heading</h1>
+    <h1>Our Menu</h1>
   </header>
   <div class="container">
     <section class="box">
@@ -35,4 +35,3 @@
 </body>
 
 </html>
-
