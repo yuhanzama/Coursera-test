@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.box {
+  flex: 1 1 calc(33.33% - 20px);
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative; /* Add relative positioning to the box */
+}
+
+.title {
+  background-color: #f00;
+  color: #fff;
+  text-align: right;
+  padding: 5px 10px;
+  border-bottom: 1px solid #000;
+  position: absolute; /* Add absolute positioning to the title */
+  top: 0; /* Position the title at the top */
+  right: 0; /* Position the title at the right */
+}
+
+/* Align section title to the top right */
+.title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Add some padding to the content area */
+.content {
+  padding-top: 15px;
+}
+
+/* Tablet view */
+@media screen and (max-width: 991px) {
+  .box {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .box:nth-child(3) {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 767px) {
+  .box {
+    flex: 1 1 100%;
+  }
+
+  .box:nth-child(n+2) {
+    margin-top: 20px;
+  }
+
+  .title {
+    text-align: left; /* Align the title to the left for small boxes */
+    top: 0; /* Position the title at the top */
+    right: auto; /* Remove right positioning for small boxes */
+    bottom: 0; /* Position the title at the bottom */
+    left: 0; /* Position the title at the left */
+  }
+}
+
